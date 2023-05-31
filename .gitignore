@@ -1,10 +1,3 @@
-# *
-# !.gitignore
-# !nvim/
-# !kitty/
-# !hypr/
-# !waybar/
-# !rofi/
 /*
 !.gitignore
 !nvim/
@@ -12,3 +5,4 @@
 !hypr/
 !waybar/
 !rofi/
+!home_dir_files/
