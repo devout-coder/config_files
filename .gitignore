@@ -1,0 +1,14 @@
+# *
+# !.gitignore
+# !nvim/
+# !kitty/
+# !hypr/
+# !waybar/
+# !rofi/
+/*
+!.gitignore
+!nvim/
+!kitty/
+!hypr/
+!waybar/
+!rofi/
