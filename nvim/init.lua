@@ -31,7 +31,7 @@ map("n", "pp", "$", { silent = true })
 map("n", "qq", "0", { silent = true })
 map("n", "<Esc>", ":noh<return><Esc>", { silent = true })
 map("v", "p", '"_dP')
-map("t","<Esc>", "<C-\\><C-n>")
+map("t","jj", "<C-\\><C-n>")
 -- map("v", "p", '"_dP')
 
 astronvim.conditional_func(astronvim.user_plugin_opts("polish", nil, false))
