@@ -1,13 +1,14 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 38,
+  "height": 40,
+  "width": 1900,
   "modules-left": [
     "custom/launcher",
     "wlr/workspaces", 
     "custom/spotify"
   ],
-  "modules-center": [],
+  "modules-center": ["clock"],
   "modules-right": [
     "tray",
     // "custom/caffeine",
@@ -19,11 +20,12 @@
     "backlight",
     "pulseaudio",
     "battery",
-    "clock",
+    // "clock",
     "custom/exit"
   ],
   "custom/launcher": {
-    "format": "<span color='#F38BA8'></span>",
+    "format": "<span color='#000000'>󰣇</span>",
+    // "height": 10,
     // "on-click": "wofi --show drun --insensitive --allow-images"
     "on-click": "pkill rofi || rofi -show drun --insensitive --allow-images"
   },
@@ -45,7 +47,7 @@
       "08": [],
       "09": [],
       "10": []
-    }
+    },
     // "format-icons": {
     //   "1": "",
     //   "2": "",
@@ -57,7 +59,7 @@
     //   "8": "8.",
     //   "9": "9.",
     //   "10": "10.",
-     
+    //  
     // }
   },
   // "inhibitor": {
@@ -129,8 +131,9 @@
     ]
   },
   "clock": {
+    "interval": 1,
     "on-click": "",
-    "format": "{: %R   %d/%m}",
+    "format": "{: %H:%M:%S   %d/%m/%y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
