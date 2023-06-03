@@ -1,15 +1,19 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: FuraMono Nerd Font;
+  /* font-family: FuraMono Nerd Font; */
+  font-family: FuraMono Nerd Font, Symbols Nerd Font ;
+  /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+  /* font-family: Ubuntu, "Font Awesome 6 Free"; */
   font-weight: bold;
   font-size: 17px;
   min-height: 0;
 }
 
 window#waybar {
-  background: #15121b;
+  background: #2c2638;
   color: #cdd6f4;
+  border-radius: 15px;
 }
 
 tooltip {
@@ -28,12 +32,30 @@ tooltip {
 
 #workspaces button.active {
   color: #cdd6f4;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
 }
 
 #workspaces button.focused {
   color: #cdd6f4;
   background: #eba0ac;
   border-radius: 10px;
+    /* text-shadow: */
+    /* 0 0 7px #fff, */
+    /* 0 0 10px #fff, */
+    /* 0 0 21px #fff, */
+    /* 0 0 42px #0fa, */
+    /* 0 0 82px #0fa, */
+    /* 0 0 92px #0fa, */
+    /* 0 0 102px #0fa, */
+    /* 0 0 151px #0fa; */
 }
 
 #workspaces button.urgent {
@@ -49,14 +71,14 @@ tooltip {
 }
 
 #custom-launcher {
-  background: #15121b;
+  background: #2c2638;
   padding-right: 7px;
   padding-left: 7px;
 }
 #custom-exit,
 #custom-language,
-#custom-updates,
-#custom-caffeine,
+/* #custom-updates, */
+/* #custom-caffeine, */
 #clock,
 #battery,
 #pulseaudio,
@@ -85,11 +107,11 @@ tooltip {
   margin-left: 5px;
 }
 
-#custom-caffeine {
-  color: #89dceb;
-  border-radius: 10px 0px 0px 10px;
-  padding-right: 12px;
-}
+/* #custom-caffeine { */
+/*   color: #89dceb; */
+/*   border-radius: 10px 0px 0px 10px; */
+/*   padding-right: 12px; */
+/* } */
 
 /* * #inhibitor { */ 
 /*   background: #1e1e2e; */
@@ -103,9 +125,9 @@ tooltip {
   color: #f38ba8;
 }
 
-#custom-updates {
-  color: #f5c2e7;
-}
+/* #custom-updates { */
+/*   color: #f5c2e7; */
+/* } */
 
 #cpu {
   background: #1e1e2e;
@@ -143,6 +165,6 @@ tooltip {
 }
 
 #custom-spotify {
-  background: #15121b;
+  background: #2c2638;
   color: #cdd6f4;
 }

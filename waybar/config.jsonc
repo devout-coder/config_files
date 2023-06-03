@@ -4,15 +4,15 @@
   "height": 38,
   "modules-left": [
     "custom/launcher",
-    "wlr/workspaces",
+    "wlr/workspaces", 
     "custom/spotify"
   ],
   "modules-center": [],
   "modules-right": [
     "tray",
-    "custom/caffeine",
+    // "custom/caffeine",
     // "inhibitor",
-    "custom/updates",
+    // "custom/updates",
     "network",
     "memory",
     "cpu",
@@ -32,8 +32,8 @@
     "all-outputs": true,
     "on-click": "activate",
     "format": "{icon}",
-    "on-scroll-down": "hyprctl dispatch workspace e+1",
-    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
+    "on-scroll-up": "hyprctl dispatch workspace +1",
     "persistent_workspaces": {
       "01": [],
       "02": [],
@@ -69,23 +69,23 @@
   //     "deactivated": ""
   //   }
   // },
-  "custom/caffeine": {
-    "on-click": "",
-    "exec": "~/.config/waybar/scripts/caffeine.sh",
-    "return-type": "json",
-    "interval": 3,
-    "format-icons": [
-      "󰛊",
-      "󰅶"
-    ],
-    "format": "{icon}"
-  },
-  "custom/updates": {
-    "exec": "(checkupdates ; yay -Qua) | wc -l",
-    "interval": 12000,
-    "format": "󰇚 {}",
-    "on-click": "wezterm start yay -Syu --noconfirm --devel"
-  },
+  // "custom/caffeine": {
+  //   "on-click": "",
+  //   "exec": "~/.config/waybar/scripts/caffeine.sh",
+  //   "return-type": "json",
+  //   "interval": 3,
+  //   "format-icons": [
+  //     "\udb83\udfaa",
+  //     "\udb81\udeca"
+  //   ],
+  //   "format": "{icon}"
+  // },
+  // "custom/updates": {
+  //   "exec": "(checkupdates ; yay -Qua) | wc -l",
+  //   "interval": 12000,
+  //   "format": "󰇚 {}",
+  //   "on-click": "wezterm start yay -Syu --noconfirm --devel"
+  // },
   "tray": {
     "on-click": "",
     "icon-size": 17,
@@ -134,7 +134,7 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
-    "format-wifi": "🛜{essid}",
+    "format-wifi": " {essid}",
     "format-ethernet": "󰈀 {essid}",
     "format-linked": "{ifname} (No IP) 󰊗",
     "format-disconnected": "󰖪 Disc.",
