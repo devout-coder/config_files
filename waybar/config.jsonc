@@ -11,7 +11,7 @@
   "modules-right": [
     "tray",
     "custom/caffeine",
-    "inhibitor",
+    // "inhibitor",
     "custom/updates",
     "network",
     "memory",
@@ -60,15 +60,15 @@
      
     // }
   },
-  "inhibitor": {
-    "on-click": "",
-    "what": "idle",
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
+  // "inhibitor": {
+  //   "on-click": "",
+  //   "what": "idle",
+  //   "format": "{icon}",
+  //   "format-icons": {
+  //     "activated": "",
+  //     "deactivated": ""
+  //   }
+  // },
   "custom/caffeine": {
     "on-click": "",
     "exec": "~/.config/waybar/scripts/caffeine.sh",
@@ -100,8 +100,8 @@
       "󰃟",
       "󰃠"
     ],
-    "on-scroll-up": "brightnessctl set 1%+",
-    "on-scroll-down": "brightnessctl set 1%-",
+    "on-scroll-down": "brightnessctl set 1%+",
+    "on-scroll-up": "brightnessctl set 1%-",
     "min-length": 6
   },
   "battery": {
@@ -158,6 +158,8 @@
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 Muted",
     "on-click": "~/.config/hypr/scripts/volume_ctl.sh",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
     "scroll-step": 1,
     "format-icons": {
       "headphone": "",
