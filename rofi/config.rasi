@@ -6,7 +6,7 @@ configuration{
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
-    hide-scrollbar: true;
+    hide-scrollbar: false;
     display-drun: " 󰀻 Apps ";
     display-run: "   Run ";
     display-emoji: " Emoji ";
@@ -16,3 +16,4 @@ configuration{
     sidebar-mode: true;
 }
 
+@theme "my-rofi-theme"
