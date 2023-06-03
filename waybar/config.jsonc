@@ -2,6 +2,7 @@
   "layer": "top",
   "position": "top",
   "height": 40,
+  "margin": 7,
   "width": 1900,
   "modules-left": [
     "custom/launcher",

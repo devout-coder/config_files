@@ -1,3 +1,4 @@
+# ~
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -41,6 +42,8 @@ eval "$(zoxide init zsh)"
 
 setopt globdots
 
+bindkey -v
+export KEYTIMEOUT=1
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,6 +110,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-autocomplete
+  vi-mode
   )
 
 source $ZSH/oh-my-zsh.sh

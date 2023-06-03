@@ -1,3 +1,5 @@
+" ~ 
+
 :set relativenumber
 
 inoremap jj <Esc>
