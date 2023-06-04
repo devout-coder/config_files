@@ -8,7 +8,7 @@
   font-weight: bold;
   font-size: 17px;
   min-height: 0;
-  padding: 0 4px;
+  padding: 1px 4px;
 }
 
 window#waybar {
@@ -159,9 +159,13 @@ tooltip {
 
 #backlight {
   color: #cba6f7;
+  /* padding: 10px; */
 }
 
 #custom-spotify {
   background: #2c2638;
   color: #cdd6f4;
+}
+#custom-exit{
+  padding: 7px 14px;
 }
