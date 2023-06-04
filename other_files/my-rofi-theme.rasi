@@ -1,7 +1,7 @@
 // ~/.local/share/rofi/themes
 
 * {
-    bg-col:  #2c2638;
+    bg-col:  #3c344c;
     bg-col-light: #1e1e2e;
     border-col: #1e1e2e;
     selected-col: #1e1e2e;

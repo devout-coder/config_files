@@ -13,7 +13,7 @@
 
 window#waybar {
   margin-top: 10px;
-  background: #2c2638;
+  background: #3c344c;
   color: #cdd6f4;
   border-radius: 15px;
 }
@@ -73,7 +73,7 @@ tooltip {
 }
 
 #custom-launcher {
-  /* background: #2c2638; */
+  /* background: #3c344c; */
   padding-right: 20px;
   padding-left: 20px;
   /* height: 20px; */
@@ -163,7 +163,7 @@ tooltip {
 }
 
 #custom-spotify {
-  background: #2c2638;
+  background: #3c344c;
   color: #cdd6f4;
 }
 #custom-exit{
