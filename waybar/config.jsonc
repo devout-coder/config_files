@@ -118,9 +118,9 @@
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": [
-      "CHARGE-IMMEDIATELY-NOW 󰂎",
-      "Charge-immediately 󰁺",
-      "Charge-quickly 󰁻",
+      "󰂎",
+      "󰁺",
+      "󰁻",
       "󰁼",
       "󰁽",
       "󰁾",
