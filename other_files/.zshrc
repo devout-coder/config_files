@@ -6,12 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+if [ "$TMUX" = "" ]; then tmux; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export HYPRSHOT_DIR="~/Pictures"
+export HYPRSHOT_DIR="/home/pranil/Pictures/Screenshots"
 export EDITOR=/usr/bin/nvim
 export CHROME_EXECUTABLE=/usr/bin/brave-browser-stable
 # Set name of the theme to load --- if set to "random", it will
