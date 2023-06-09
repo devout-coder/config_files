@@ -17,7 +17,7 @@
     // "custom/updates",
     "network",
     "memory",
-    "cpu",
+    // "cpu",
     "backlight",
     "pulseaudio",
     "battery",
@@ -134,7 +134,8 @@
   "clock": {
     "interval": 1,
     "on-click": "",
-    "format": "{: %H:%M:%S   %d/%m/%y}",
+    // "format": "{:%a,  %H:%M:%S   %d/%m/%y}",
+    "format": "{:%A  %H:%M:%S   %d/%m/%y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
@@ -146,12 +147,12 @@
     // "on-click": "wofi-wifi-menu",
     "on-click": "kitty -e nmtui"
   },
-  "cpu": {
-    "on-click": "",
-    "interval": 10,
-    "format": " {}%"
-    // "max-length": 10
-  },
+  // "cpu": {
+  //   "on-click": "",
+  //   "interval": 10,
+  //   "format": " {}%"
+  //   // "max-length": 10
+  // },
   "memory": {
     "on-click": "",
     "interval": 30,
