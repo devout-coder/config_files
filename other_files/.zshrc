@@ -14,6 +14,7 @@ if [ "$TMUX" = "" ]; then tmux; fi
 export ZSH="$HOME/.oh-my-zsh"
 export HYPRSHOT_DIR="/home/pranil/Pictures/Screenshots"
 export EDITOR=/usr/bin/nvim
+export TESSDATA_PREFIX=/usr/share/tessdata
 export CHROME_EXECUTABLE=/usr/bin/brave-browser-stable
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
