@@ -113,7 +113,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-autocomplete
-  vi-mode
+  # vi-mode
   )
 
 source $ZSH/oh-my-zsh.sh
