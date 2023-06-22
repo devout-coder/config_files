@@ -23,6 +23,7 @@ export CHROME_EXECUTABLE=/usr/bin/brave-browser-stable
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 export ANDROID_HOME=/home/pranil/Android/Sdk
+export EDITOR=nvim sudoedit
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
