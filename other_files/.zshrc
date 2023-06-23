@@ -6,10 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [[ "$TMUX" = "" && "$TERM"="xterm-kitty" ]]; then tmux attach-session -t default; elif [[ "$TMUX" = "" ]]; then tmux; fi
+if [[ "$tmux" == "" && "$TERM_PROGRAM" == "" ]]; then tmux attach-session -t default; else [[ "$tmux" == "" ]]; tmux; fi
+# this line is casuing following error in vs terminal: open terminal failed: not a terminal
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# echo $TERM_PROGRAM >> ~/tp.logs
+# echo $TERM_PROGRAM >> ~/tp.log
 # echo $TERM >> ~/tp.log
 
 # if [ "$TMUX" = "" && "$TERM"="xterm-kitty" ] then tmux attach-session -t default
