@@ -44,6 +44,10 @@ local default_plugins = {
     },
     config = true,
 },
+{
+    'github/copilot.vim',
+    lazy = false,
+},
 -- {
 --     'neoclide/coc.nvim',
 --     lazy = false,
@@ -181,15 +185,29 @@ local default_plugins = {
     end,
   },
 
-  {
-    "neovim/nvim-lspconfig",
-    init = function()
-      require("core.utils").lazy_load "nvim-lspconfig"
-    end,
-    config = function()
+{
+  "neovim/nvim-lspconfig",
+
+   dependencies = {
+     "jose-elias-alvarez/null-ls.nvim",
+     config = function()
+       require "custom.configs.null-ls"
+     end,
+   },
+   config = function()
       require "plugins.configs.lspconfig"
-    end,
-  },
+      require "custom.configs.lspconfig"
+   end,
+},
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   init = function()
+  --     require("core.utils").lazy_load "nvim-lspconfig"
+  --   end,
+  --   config = function()
+  --     require "plugins.configs.lspconfig"
+  --   end,
+  -- },
 
   -- load luasnips + cmp related in insert mode only
   {
