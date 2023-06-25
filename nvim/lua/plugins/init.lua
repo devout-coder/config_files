@@ -34,7 +34,39 @@ local default_plugins = {
       require("nvterm").setup(opts)
     end,
   },
-
+{
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+    config = true,
+},
+{
+    'dart-lang/dart-vim-plugin',
+    lazy = false,
+    -- config = true,
+},
+{
+    'thosakwe/vim-flutter',
+    lazy = false,
+    -- config = true,
+},
+{
+    'natebosch/vim-lsc',
+    lazy = false,
+    -- config = true,
+},
+{
+    'natebosch/vim-lsc-dart',
+    lazy = false,
+    -- config = true,
+},
+  {
+    'Nash0x7E2/awesome-flutter-snippets',
+    lazy = false,
+  },
   {
     "NvChad/nvim-colorizer.lua",
     init = function()

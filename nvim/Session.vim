@@ -13,15 +13,26 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +22 ~/.config/nvim/lua/plugins/init.lua
-badd +21 ~/.config/nvim/init.lua
-badd +7 ~/.config/nvim/lua/core/mappings.lua
-badd +9 .gitignore
+badd +37 ~/.config/nvim/lua/plugins/init.lua
+badd +18 ~/.config/nvim/init.lua
+badd +35 ~/.config/nvim/lua/core/mappings.lua
 argglobal
 %argdel
-edit .gitignore
+edit ~/.config/nvim/lua/plugins/init.lua
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/core/mappings.lua
+balt ~/.config/nvim/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -32,12 +43,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 9 - ((8 * winheight(0) + 23) / 46)
+let s:l = 37 - ((22 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 9
-normal! 06|
+keepjumps 37
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -45,6 +56,8 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
