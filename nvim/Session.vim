@@ -13,12 +13,18 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +37 ~/.config/nvim/lua/plugins/init.lua
-badd +18 ~/.config/nvim/init.lua
-badd +35 ~/.config/nvim/lua/core/mappings.lua
+badd +251 ~/.config/nvim/lua/plugins/init.lua
+badd +9 ~/.config/nvim/init.lua
+badd +14 ~/.config/nvim/lua/core/mappings.lua
+badd +6 ~/.config/nvim/lua/custom/plugins.lua
+badd +1 ~/.config/nvim/lua/custom/init.lua
+badd +16 ~/.config/nvim/lua/core/init.lua
+badd +23 lua/plugins/configs/nvimtree.lua
+badd +1 ~/.config/nvim/lua/custom/chadrc.lua
+badd +9 ~/.config/nvim/.gitignore
 argglobal
 %argdel
-edit ~/.config/nvim/lua/plugins/init.lua
+edit ~/.config/nvim/.gitignore
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -32,7 +38,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/init.lua
+balt lua/plugins/configs/nvimtree.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -43,12 +49,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 37 - ((22 * winheight(0) + 23) / 46)
+let s:l = 9 - ((8 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 37
-normal! 0
+keepjumps 9
+normal! 011|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

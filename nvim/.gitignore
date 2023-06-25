@@ -6,4 +6,4 @@ syntax
 coc-settings.json
 .luarc.json
 lazy-lock.json
-# Session.vim
+Session.vim

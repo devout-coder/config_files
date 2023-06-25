@@ -34,6 +34,7 @@ local default_plugins = {
       require("nvterm").setup(opts)
     end,
   },
+  -- flutter plugins start
 {
     'akinsho/flutter-tools.nvim',
     lazy = false,
@@ -43,30 +44,38 @@ local default_plugins = {
     },
     config = true,
 },
-{
-    'dart-lang/dart-vim-plugin',
-    lazy = false,
-    -- config = true,
-},
-{
-    'thosakwe/vim-flutter',
-    lazy = false,
-    -- config = true,
-},
-{
-    'natebosch/vim-lsc',
-    lazy = false,
-    -- config = true,
-},
-{
-    'natebosch/vim-lsc-dart',
-    lazy = false,
-    -- config = true,
-},
-  {
-    'Nash0x7E2/awesome-flutter-snippets',
-    lazy = false,
-  },
+-- {
+--     'neoclide/coc.nvim',
+--     lazy = false,
+--     branch = "master",
+--     build = "yarn install --frozen-lockfile",
+--     -- config = true,
+-- },
+-- {
+--     'dart-lang/dart-vim-plugin',
+--     lazy = false,
+--     -- config = true,
+-- },
+-- {
+--     'thosakwe/vim-flutter',
+--     lazy = false,
+--     -- config = true,
+-- },
+-- {
+--     'natebosch/vim-lsc',
+--     lazy = false,
+--     -- config = true,
+-- },
+-- {
+--     'natebosch/vim-lsc-dart',
+--     lazy = false,
+--     -- config = true,
+-- },
+--   -- {
+  --   'Nash0x7E2/awesome-flutter-snippets',
+  --   lazy = false,
+  -- },
+ -- flutter plugins end
   {
     "NvChad/nvim-colorizer.lua",
     init = function()

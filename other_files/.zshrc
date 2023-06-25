@@ -22,6 +22,7 @@ if [ "$TMUX" = "" ]; then tmux; fi
 export ZSH="$HOME/.oh-my-zsh"
 export HYPRSHOT_DIR="/home/pranil/Pictures/Screenshots"
 export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 export TESSDATA_PREFIX=/usr/share/tessdata
 export CHROME_EXECUTABLE=/usr/bin/brave-browser-stable
 # Set name of the theme to load --- if set to "random", it will
