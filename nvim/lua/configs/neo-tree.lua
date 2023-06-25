@@ -6,13 +6,6 @@ require("neo-tree").setup(astronvim.user_plugin_opts("plugins.neo-tree", {
     content_layout = "center",
     tab_labels = {
       filesystem = astronvim.get_icon "FolderClosed" .. " File",
-      filesystem = {
-          filtered_items = {
-            visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
-            hide_dotfiles = false,
-            hide_gitignored = false,
-          },
-      },
       buffers = astronvim.get_icon "DefaultFile" .. " Bufs",
       git_status = astronvim.get_icon "Git" .. " Git",
       diagnostics = astronvim.get_icon "Diagnostic" .. " Diagnostic",

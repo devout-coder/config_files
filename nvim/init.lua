@@ -17,15 +17,15 @@ for _, source in ipairs {
   if not status_ok then vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. fault) end
 end
 
--- my custom keybindings
+require('toggleterm').setup {}
 require('neo-tree').setup {
-  filesystem = {
-    filtered_items = {
-      visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
-      hide_dotfiles = false,
-      hide_gitignored = false,
-    },
-  }
+      filesystem = {
+          filtered_items = {
+            visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+            hide_dotfiles = false,
+            hide_gitignored = false,
+          },
+      },
 }
 
 function map(mode, lhs, rhs, opts)
@@ -48,3 +48,15 @@ astronvim.conditional_func(astronvim.user_plugin_opts("polish", nil, false))
 if vim.fn.has "nvim-0.8" ~= 1 or vim.version().prerelease then
   vim.schedule(function() astronvim.notify("Unsupported Neovim Version! Please check the requirements", "error") end)
 end
+
+-- call plug#begin('~/.local/share/nvim/site/plugged')
+-- Plug 'junegunn/goyo.vim'
+-- call plug#end()
+--
+local Plug = vim.fn['plug#']
+
+vim.call('plug#begin', '~/.local/share/nvim/site/plugged')
+
+Plug 'tpope/vim-fugitive'
+
+vim.call('plug#end')
