@@ -22,7 +22,6 @@ local default_plugins = {
       require "nvchad_ui"
     end,
   },
-
   {
     "NvChad/nvterm",
     init = function()
@@ -140,7 +139,6 @@ local default_plugins = {
       require("nvim-treesitter.configs").setup(opts)
     end,
   },
-
   -- git stuff
   {
     "lewis6991/gitsigns.nvim",
@@ -191,7 +189,8 @@ local default_plugins = {
 
 {
   "neovim/nvim-lspconfig",
-
+    cmd = {"LspInfo"},
+    lazy = false,
    dependencies = {
      "jose-elias-alvarez/null-ls.nvim",
      config = function()

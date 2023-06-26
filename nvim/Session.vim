@@ -13,18 +13,18 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +196 ~/.config/nvim/lua/plugins/init.lua
-badd +6 ~/.config/nvim/init.lua
+badd +169 ~/.config/nvim/lua/plugins/init.lua
+badd +19 ~/.config/nvim/init.lua
 badd +128 ~/.config/nvim/lua/core/mappings.lua
-badd +11 ~/.config/nvim/lua/custom/plugins.lua
+badd +74 ~/.config/nvim/lua/custom/plugins.lua
 badd +1 ~/.config/nvim/lua/custom/init.lua
 badd +20 ~/.config/nvim/lua/custom/mappings.lua
 badd +46 ~/.config/nvim/lua/custom/configs/null-ls.lua
-badd +14 ~/.config/nvim/lua/custom/configs/lspconfig.lua
-badd +67 ~/.config/nvim/lua/plugins/configs/lspconfig.lua
+badd +86 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +22 ~/.config/nvim/lua/plugins/configs/lspconfig.lua
 badd +9 ~/.config/nvim/.gitignore
 badd +15 ~/.config/nvim/lua/pde/lua.lua
-badd +14 ~/.config/nvim/lua/pde/python.lua
+badd +19 ~/.config/nvim/lua/pde/python.lua
 badd +158 ~/.config/nvim/lua/config/lsp/init.lua
 badd +52 ~/.config/nvim/lua/pde/go.lua
 badd +77 ~/.config/nvim/lua/pde/cpp.lua
@@ -33,16 +33,13 @@ badd +3 ~/.config/nvim/lua/pde/json.lua
 badd +11 ~/.config/nvim/lua/pde/typescript.lua
 badd +1 ~/.config/nvim/lua/custom/chadrc.lua
 badd +1 ~/.config/nvim/lua/custom/configs/overrides.lua
+badd +2 man://END(7)
 argglobal
 %argdel
 edit ~/.config/nvim/lua/custom/configs/lspconfig.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -52,9 +49,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-wincmd =
 argglobal
-balt ~/.config/nvim/lua/plugins/init.lua
+balt ~/.config/nvim/lua/custom/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -65,36 +61,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 8 - ((7 * winheight(0) + 11) / 22)
+let s:l = 86 - ((45 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 8
-normal! 0
-wincmd w
-argglobal
-enew | setl bt=help
-help 
-balt ~/.config/nvim/lua/custom/configs/lspconfig.lua
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 11) / 23)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
-wincmd w
-2wincmd w
-wincmd =
+keepjumps 86
+normal! 02|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

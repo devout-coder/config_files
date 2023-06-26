@@ -19,7 +19,7 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
-
+-- require'plugins.configs.lspconfig'.pyright.setup{}
 -- require("lua.pde.cpp")
 -- require("lua.pde.go")
 -- require("lua.pde.java")
