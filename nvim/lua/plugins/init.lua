@@ -49,6 +49,11 @@ local default_plugins = {
     lazy = false,
 },
 -- {
+--     'arjunmahishi/flow.nvim',
+--     lazy = false,
+-- },
+
+-- {
 --     'neoclide/coc.nvim',
 --     lazy = false,
 --     branch = "master",
