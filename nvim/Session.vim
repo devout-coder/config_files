@@ -18,7 +18,7 @@ badd +21 ~/.config/nvim/init.lua
 badd +14 ~/.config/nvim/lua/core/mappings.lua
 badd +6 ~/.config/nvim/lua/custom/plugins.lua
 badd +13 ~/.config/nvim/lua/custom/init.lua
-badd +1 ~/.config/nvim/lua/custom/mappings.lua
+badd +16 ~/.config/nvim/lua/custom/mappings.lua
 badd +14 ~/.config/nvim/lua/custom/configs/null-ls.lua
 badd +16 ~/.config/nvim/lua/custom/configs/lspconfig.lua
 argglobal
@@ -48,11 +48,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 23) / 46)
+let s:l = 18 - ((17 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 18
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
