@@ -13,22 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +190 ~/.config/nvim/lua/plugins/init.lua
-badd +6 ~/.config/nvim/init.lua
-badd +1 ~/.config/nvim/lua/core/mappings.lua
+badd +337 ~/.config/nvim/lua/plugins/init.lua
+badd +21 ~/.config/nvim/init.lua
+badd +14 ~/.config/nvim/lua/core/mappings.lua
 badd +6 ~/.config/nvim/lua/custom/plugins.lua
-badd +1 ~/.config/nvim/lua/custom/init.lua
-badd +71 ~/.config/nvim/lua/core/init.lua
-badd +23 lua/plugins/configs/nvimtree.lua
-badd +1 ~/.config/nvim/lua/custom/chadrc.lua
-badd +8 ~/.config/nvim/.gitignore
-badd +17 ~/.config/nvim/lua/custom/mappings.lua
-badd +33 ~/.config/nvim/lua/custom/configs/null-ls.lua
-badd +17 ~/.config/nvim/lua/custom/configs/lspconfig.lua
-badd +8 ~/.config/nvim/lua/custom/configs/overrides.lua
+badd +13 ~/.config/nvim/lua/custom/init.lua
+badd +1 ~/.config/nvim/lua/custom/mappings.lua
+badd +14 ~/.config/nvim/lua/custom/configs/null-ls.lua
+badd +16 ~/.config/nvim/lua/custom/configs/lspconfig.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/custom/configs/null-ls.lua
+edit ~/.config/nvim/lua/custom/mappings.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -42,7 +37,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/custom/configs/overrides.lua
+balt ~/.config/nvim/lua/custom/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
