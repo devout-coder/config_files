@@ -1,8 +1,12 @@
+-- if not require("config").pde.go then
+--   return {}
+-- end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "go", "gomod" })
+      vim.list_extend(opts.ensure_installed, { "go", "gomod", "gowork", "gosum" })
     end,
   },
   {
@@ -10,8 +14,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(
         opts.ensure_installed,
-        { "delve", "gotests", "golangci-lint", "gofumpt", "goimports", "golangci-lint-langserver", "impl",
-          "gomodifytags", "iferr", "gotestsum" }
+        { "delve", "gotests", "golangci-lint", "gofumpt", "goimports", "golangci-lint-langserver", "impl", "gomodifytags", "iferr", "gotestsum" }
       )
     end,
   },
@@ -73,6 +76,18 @@ return {
               map("n", "<leader>lt", "<cmd>GoTest<Cr>", "Go Test")
               map("n", "<leader>lR", "<cmd>GoRun<Cr>", "Go Run")
               map("n", "<leader>dT", "<cmd>lua require('dap-go').debug_test()<cr>", "Go Debug Test")
+              
+              if not client.server_capabilities.semanticTokensProvider then
+                local semantic = client.config.capabilities.textDocument.semanticTokens
+                client.server_capabilities.semanticTokensProvider = {
+                  full = true,
+                  legend = {
+                    tokenTypes = semantic.tokenTypes,
+                    tokenModifiers = semantic.tokenModifiers,
+                  },
+                  range = true,
+                }
+              end
             end
           end)
         end,
@@ -82,5 +97,16 @@ return {
   {
     "mfussenegger/nvim-dap",
     dependencies = { "leoluz/nvim-dap-go", opts = {} },
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/neotest-go",
+    },
+    opts = function(_, opts)
+      vim.list_extend(opts.adapters, {
+        require "neotest-go",
+      })
+    end,
   },
 }

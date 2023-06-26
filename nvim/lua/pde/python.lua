@@ -31,10 +31,15 @@
 --           },
 --         },
 --       },
+--     
 --     })
 --   end,
 -- })
---
+
+-- if not require("config").pde.python then
+--   return {}
+-- end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",

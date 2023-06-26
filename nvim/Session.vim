@@ -13,56 +13,27 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +202 ~/.config/nvim/lua/plugins/init.lua
-badd +23 ~/.config/nvim/init.lua
+badd +50 ~/.config/nvim/lua/plugins/init.lua
+badd +29 ~/.config/nvim/init.lua
 badd +137 ~/.config/nvim/lua/core/mappings.lua
 badd +21 ~/.config/nvim/lua/custom/plugins.lua
-badd +8 ~/.config/nvim/lua/custom/init.lua
+badd +16 ~/.config/nvim/lua/custom/init.lua
 badd +43 ~/.config/nvim/lua/custom/mappings.lua
 badd +9 ~/.config/nvim/lua/custom/configs/null-ls.lua
-badd +15 ~/.config/nvim/lua/custom/configs/lspconfig.lua
-badd +13 ~/.config/nvim/lua/plugins/configs/lspconfig.lua
+badd +6 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +9 ~/.config/nvim/lua/plugins/configs/lspconfig.lua
 badd +9 ~/.config/nvim/.gitignore
-badd +12 ~/.config/nvim/lua/custom/configs/python.lua
-badd +29 ~/.config/nvim/lua/config/lsp/lua.lua
-badd +1 ~/.config/nvim/lua/config/lsp/python.lua
-badd +152 ~/.config/nvim/lua/config/lsp/init.lua
-badd +3 ~/.config/nvim/lua/custom/README.md
-badd +7 ~/.config/nvim/lua/config/lsp/go.lua
-badd +1 ~/.config/nvim/lua/config/lsp/cpp.lua
+badd +47 ~/.config/nvim/lua/pde/lua.lua
+badd +41 ~/.config/nvim/lua/pde/python.lua
+badd +158 ~/.config/nvim/lua/config/lsp/init.lua
+badd +3 ~/.config/nvim/lua/pde/go.lua
+badd +23 ~/.config/nvim/lua/pde/cpp.lua
+badd +6 ~/.config/nvim/lua/pde/java.lua
+badd +3 ~/.config/nvim/lua/pde/json.lua
+badd +11 ~/.config/nvim/lua/pde/typescript.lua
+badd +1 ~/.config/nvim/lua/custom/chadrc.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/config/lsp/init.lua
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-balt ~/.config/nvim/lua/config/lsp/python.lua
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
-normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -70,8 +41,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)

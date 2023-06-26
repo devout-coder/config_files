@@ -20,4 +20,10 @@ dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
-require("config.lsp")
+require("lua.pde.cpp")
+require("lua.pde.go")
+require("lua.pde.java")
+require("lua.pde.json")
+require("lua.pde.lua")
+require("lua.pde.python")
+require("lua.pde.typescript")

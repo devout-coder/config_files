@@ -1,3 +1,6 @@
+-- if not require("config").pde.cpp then
+--   return {}
+-- end
 
 local function get_codelldb()
   local mason_registry = require "mason-registry"
@@ -23,9 +26,34 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = { "p00f/clangd_extensions.nvim" },
     opts = {
       servers = {
         clangd = {},
+      },
+      setup = {
+        clangd = function(_, _)
+          local clangd_flags = {
+            "--background-index",
+            "--fallback-style=Google",
+            "--all-scopes-completion",
+            "--clang-tidy",
+            "--log=error",
+            "--suggest-missing-includes",
+            "--cross-file-rename",
+            "--completion-style=detailed",
+            "--pch-storage=memory", -- could also be disk
+            "--folding-ranges",
+            "--enable-config", -- clangd 11+ supports reading from .clangd configuration file
+            "--offset-encoding=utf-16", --temporary fix for null-ls
+          }
+          require("clangd_extensions").setup {
+            server = {
+              cmd = { "clangd", unpack(clangd_flags) },
+            },
+          }
+          return true
+        end,
       },
     },
   },
@@ -65,5 +93,16 @@ return {
         end,
       },
     },
+  },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      { "alfaix/neotest-gtest", opts = {} },
+    },
+    opts = function(_, opts)
+      vim.list_extend(opts.adapters, {
+        require "neotest-gtest",
+      })
+    end,
   },
 }
