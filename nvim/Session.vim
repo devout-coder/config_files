@@ -13,18 +13,26 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +178 ~/.config/nvim/lua/plugins/init.lua
-badd +6 ~/.config/nvim/init.lua
+badd +202 ~/.config/nvim/lua/plugins/init.lua
+badd +23 ~/.config/nvim/init.lua
 badd +137 ~/.config/nvim/lua/core/mappings.lua
-badd +8 ~/.config/nvim/lua/custom/plugins.lua
-badd +13 ~/.config/nvim/lua/custom/init.lua
-badd +1 ~/.config/nvim/lua/custom/mappings.lua
-badd +14 ~/.config/nvim/lua/custom/configs/null-ls.lua
-badd +12 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +21 ~/.config/nvim/lua/custom/plugins.lua
+badd +8 ~/.config/nvim/lua/custom/init.lua
+badd +43 ~/.config/nvim/lua/custom/mappings.lua
+badd +9 ~/.config/nvim/lua/custom/configs/null-ls.lua
+badd +15 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +13 ~/.config/nvim/lua/plugins/configs/lspconfig.lua
 badd +9 ~/.config/nvim/.gitignore
+badd +12 ~/.config/nvim/lua/custom/configs/python.lua
+badd +29 ~/.config/nvim/lua/config/lsp/lua.lua
+badd +1 ~/.config/nvim/lua/config/lsp/python.lua
+badd +152 ~/.config/nvim/lua/config/lsp/init.lua
+badd +3 ~/.config/nvim/lua/custom/README.md
+badd +7 ~/.config/nvim/lua/config/lsp/go.lua
+badd +1 ~/.config/nvim/lua/config/lsp/cpp.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/custom/configs/lspconfig.lua
+edit ~/.config/nvim/lua/config/lsp/init.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -38,7 +46,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/custom/plugins.lua
+balt ~/.config/nvim/lua/config/lsp/python.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
