@@ -22,12 +22,13 @@ badd +3 ~/.config/nvim/lua/custom/README.md
 badd +15 lua/plugins/configs/nvimtree.lua
 badd +15 lua/plugins/configs/mason.lua
 badd +21 lua/custom/configs/overrides.lua
-badd +4 ~/.config/nvim/lua/custom/configs/null-ls.lua
+badd +21 ~/.config/nvim/lua/custom/configs/null-ls.lua
 badd +1 ~/.config/nvim/lua/plugins/configs/treesitter.lua
 badd +225 lua/core/mappings.lua
+badd +17 ~/.config/nvim/lua/custom/mappings.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/custom/configs/null-ls.lua
+edit ~/.config/nvim/lua/custom/mappings.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -41,7 +42,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/custom/configs/lspconfig.lua
+balt ~/.config/nvim/lua/custom/configs/null-ls.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -52,12 +53,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 23) / 46)
+let s:l = 17 - ((16 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
-normal! 02|
+keepjumps 17
+normal! 023|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
