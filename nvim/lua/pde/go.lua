@@ -1,6 +1,6 @@
--- if not require("config").pde.go then
---   return {}
--- end
+if not require("plugins").pde.go then
+  return {}
+end
 
 return {
   {

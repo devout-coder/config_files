@@ -42,9 +42,9 @@
 -- })
 --
 --
--- if not require("config").pde.lua then
---   return {}
--- end
+if not require("plugins").pde.lua then
+  return {}
+end
 
 return {
   {

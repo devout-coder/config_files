@@ -1,6 +1,6 @@
--- if not require("config").pde.java then
---   return {}
--- end
+if not require("plugins").pde.java then
+  return {}
+end
 
 local function get_jdtls()
   local mason_registry = require "mason-registry"

@@ -36,9 +36,9 @@
 --   end,
 -- })
 
--- if not require("config").pde.python then
---   return {}
--- end
+if not require("plugins").pde.python then
+  return {}
+end
 
 return {
   {

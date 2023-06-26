@@ -1,6 +1,6 @@
--- if not require("config").pde.cpp then
---   return {}
--- end
+if not require("plugins").pde.cpp then
+  return {}
+end
 
 local function get_codelldb()
   local mason_registry = require "mason-registry"

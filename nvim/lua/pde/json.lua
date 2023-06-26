@@ -1,6 +1,6 @@
--- if not require("config").pde.json then
---   return {}
--- end
+if not require("plugins").pde.json then
+  return {}
+end
 
 return {
   {

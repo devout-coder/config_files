@@ -1,6 +1,6 @@
--- if not require("config").pde.typescript then
---   return {}
--- end
+if not require("plugins").pde.typescript then
+  return {}
+end
 
 
 
