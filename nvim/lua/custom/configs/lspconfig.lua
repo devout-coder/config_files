@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "bashls"}
+local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "bashls", "gopls"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -13,38 +13,38 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
-lspconfig.rust_analyzer.setup {
-  -- Server-specific settings. See `:help lspconfig-setup`
-  settings = {
-    ['rust-analyzer'] = {},
-  },
-}
-
-lspconfig.lua_ls.setup {
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-}
+-- local lspconfig = require('lspconfig')
+-- lspconfig.pyright.setup {}
+-- lspconfig.tsserver.setup {}
+-- lspconfig.rust_analyzer.setup {
+--   -- Server-specific settings. See `:help lspconfig-setup`
+--   settings = {
+--     ['rust-analyzer'] = {},
+--   },
+-- }
+--
+-- lspconfig.lua_ls.setup {
+--   settings = {
+--     Lua = {
+--       runtime = {
+--         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+--         version = 'LuaJIT',
+--       },
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = {'vim'},
+--       },
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--       },
+--       -- Do not send telemetry data containing a randomized but unique identifier
+--       telemetry = {
+--         enable = false,
+--       },
+--     },
+--   },
+-- }
 --
 -- -- Global mappings.
 -- -- See `:help vim.diagnostic.*` for documentation on any of the below functions

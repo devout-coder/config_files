@@ -42,10 +42,10 @@ local default_plugins = {
     },
     config = true,
   },
-  {
-    "github/copilot.vim",
-    lazy = false,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  -- },
   -- {
   --     'arjunmahishi/flow.nvim',
   --     lazy = false,
