@@ -33,56 +33,56 @@ local default_plugins = {
     end,
   },
   -- flutter plugins start
-{
-    'akinsho/flutter-tools.nvim',
+  {
+    "akinsho/flutter-tools.nvim",
     lazy = false,
     dependencies = {
-        'nvim-lua/plenary.nvim',
-        'stevearc/dressing.nvim', -- optional for vim.ui.select
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
     },
     config = true,
-},
-{
-    'github/copilot.vim',
+  },
+  {
+    "github/copilot.vim",
     lazy = false,
-},
--- {
---     'arjunmahishi/flow.nvim',
---     lazy = false,
--- },
+  },
+  -- {
+  --     'arjunmahishi/flow.nvim',
+  --     lazy = false,
+  -- },
 
--- {
---     'neoclide/coc.nvim',
---     lazy = false,
---     branch = "master",
---     build = "yarn install --frozen-lockfile",
---     -- config = true,
--- },
--- {
---     'dart-lang/dart-vim-plugin',
---     lazy = false,
---     -- config = true,
--- },
--- {
---     'thosakwe/vim-flutter',
---     lazy = false,
---     -- config = true,
--- },
--- {
---     'natebosch/vim-lsc',
---     lazy = false,
---     -- config = true,
--- },
--- {
---     'natebosch/vim-lsc-dart',
---     lazy = false,
---     -- config = true,
--- },
---   -- {
+  -- {
+  --     'neoclide/coc.nvim',
+  --     lazy = false,
+  --     branch = "master",
+  --     build = "yarn install --frozen-lockfile",
+  --     -- config = true,
+  -- },
+  -- {
+  --     'dart-lang/dart-vim-plugin',
+  --     lazy = false,
+  --     -- config = true,
+  -- },
+  -- {
+  --     'thosakwe/vim-flutter',
+  --     lazy = false,
+  --     -- config = true,
+  -- },
+  -- {
+  --     'natebosch/vim-lsc',
+  --     lazy = false,
+  --     -- config = true,
+  -- },
+  -- {
+  --     'natebosch/vim-lsc-dart',
+  --     lazy = false,
+  --     -- config = true,
+  -- },
+  --   -- {
   --   'Nash0x7E2/awesome-flutter-snippets',
   --   lazy = false,
   -- },
- -- flutter plugins end
+  -- flutter plugins end
   {
     "NvChad/nvim-colorizer.lua",
     init = function()
@@ -186,22 +186,27 @@ local default_plugins = {
       vim.g.mason_binaries_list = opts.ensure_installed
     end,
   },
-
-{
-  "neovim/nvim-lspconfig",
-    cmd = {"LspInfo"},
+  -- {
+    -- "williamboman/mason-lspconfig.nvim",
+    -- cmd = { "LspInstall", "LspUninstall" },
+    -- ensure_installed = { "sumneko_lua" },
+  -- },
+  {
+    "neovim/nvim-lspconfig",
+    cmd = { "LspInfo", "LspInstall" },
+    -- cmd = { "LspInfo"},
     lazy = false,
-   dependencies = {
-     "jose-elias-alvarez/null-ls.nvim",
-     config = function()
-       require "custom.configs.null-ls"
-     end,
-   },
-   config = function()
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+      config = function()
+        require "custom.configs.null-ls"
+      end,
+    },
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-   end,
-},
+    end,
+  },
   -- {
   --   "neovim/nvim-lspconfig",
   --   init = function()
