@@ -14,13 +14,13 @@ else
   set shortmess=aoO
 endif
 badd +37 ~/.config/nvim/lua/plugins/init.lua
-badd +47 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +13 ~/.config/nvim/lua/custom/configs/lspconfig.lua
 badd +19 ~/.config/nvim/lua/custom/plugins.lua
 badd +8 ~/.config/nvim/lua/plugins/configs/telescope.lua
 badd +12 ~/.config/nvim/lua/custom/init.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/custom/configs/lspconfig.lua
+edit ~/.config/nvim/lua/plugins/init.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -34,7 +34,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/plugins/init.lua
+balt ~/.config/nvim/lua/custom/configs/lspconfig.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
