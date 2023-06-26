@@ -193,14 +193,14 @@ M.lspconfig = {
 
     ["[d"] = {
       function()
-        vim.diagnostic.goto_prev({ float = { border = "rounded" }})
+        vim.diagnostic.goto_prev { float = { border = "rounded" } }
       end,
       "Goto prev",
     },
 
     ["]d"] = {
       function()
-        vim.diagnostic.goto_next({ float = { border = "rounded" }})
+        vim.diagnostic.goto_next { float = { border = "rounded" } }
       end,
       "Goto next",
     },
@@ -212,7 +212,7 @@ M.lspconfig = {
       "Diagnostic setloclist",
     },
 
-    ["<leader>fm"] = {
+    ["<A-b>"] = {
       function()
         vim.lsp.buf.format { async = true }
       end,

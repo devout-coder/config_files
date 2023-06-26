@@ -36,7 +36,7 @@ local sources = {
   formatting.prettier,
   formatting.stylua,
   formatting.autopep8,
-  -- formatting.clang-format,
+  formatting.clang_format,
   lint.shellcheck,
 }
 
