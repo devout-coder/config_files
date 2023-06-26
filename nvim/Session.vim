@@ -13,14 +13,19 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +37 ~/.config/nvim/lua/plugins/init.lua
-badd +13 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +199 ~/.config/nvim/lua/plugins/init.lua
+badd +4 ~/.config/nvim/lua/custom/configs/lspconfig.lua
 badd +19 ~/.config/nvim/lua/custom/plugins.lua
 badd +8 ~/.config/nvim/lua/plugins/configs/telescope.lua
 badd +12 ~/.config/nvim/lua/custom/init.lua
+badd +3 ~/.config/nvim/lua/custom/README.md
+badd +43 lua/plugins/configs/nvimtree.lua
+badd +6 lua/plugins/configs/mason.lua
+badd +21 lua/custom/configs/overrides.lua
+badd +14 ~/.config/nvim/lua/custom/configs/null-ls.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/plugins/init.lua
+edit ~/.config/nvim/lua/custom/plugins.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -34,7 +39,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/custom/configs/lspconfig.lua
+balt lua/plugins/configs/mason.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}

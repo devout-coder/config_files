@@ -3,7 +3,7 @@ local options = {
         "lua-language-server",
         "html-lsp",
         "prettier",
-        "stylua"
+        "stylua",
   }, -- not an option from mason.nvim
 
   PATH = "skip",
