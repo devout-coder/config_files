@@ -13,15 +13,23 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +200 lua/core/mappings.lua
+badd +215 lua/core/mappings.lua
 badd +7 ~/.config/nvim/lua/custom/mappings.lua
 badd +1 ~/.config/nvim/lua/plugins/configs/nvimtree.lua
-badd +23 lua/core/init.lua
-badd +1 ~/.config/nvim/lua/custom/init.lua
-badd +0 ~/.config/nvim/lua/custom/configs/null-ls.lua
+badd +62 ~/.config/nvim/lua/plugins/init.lua
+badd +1 lua/core/init.lua
+badd +13 ~/.config/nvim/lua/custom/init.lua
+badd +26 ~/.config/nvim/lua/custom/configs/null-ls.lua
+badd +2 ~/.config/nvim/lua/custom/snippets/cpp/cpp.json
+badd +1 ~/.config/nvim/lua/custom/snippets/cpp/package.json
+badd +4 ~/.config/nvim/lua/custom/snippets/init.lua
+badd +14 ~/.config/nvim/lua/custom/snippets/python/package.json
+badd +6 ~/.config/nvim/lua/custom/snippets/python/python.json
+badd +88 ~/.config/nvim/lua/plugins/configs/cmp.lua
+badd +7 ~/.config/nvim/lua/custom/configs/lspconfig.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/custom/configs/null-ls.lua
+edit lua/core/mappings.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -35,7 +43,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/custom/init.lua
+balt lua/core/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}

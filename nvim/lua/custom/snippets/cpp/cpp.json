@@ -1,0 +1,191 @@
+
+{
+  "boilerplate": {
+    "prefix": "normal bolierplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "int main(){",
+      "\t$1",
+      "\treturn 0;",
+      "}"
+    ]
+  },
+  "cp boiler plate": {
+    "prefix": "cf boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "void solve() {",
+      "\t$1",
+      "}",
+      "",
+      "int main() {",
+      "\tint t;",
+      "\tcin >> t;",
+      "\twhile (t--)",
+      "\t\tsolve();",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  },
+
+  "cf normal input boilerplate": {
+    "prefix": "cf normal input boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "void solve() {",
+      "\t$1 $2;",
+      "\tcin >> $2;",
+      "\t$3",
+      "}",
+      "",
+      "int main() {",
+      "\tint t;",
+      "\tcin >> t;",
+      "\twhile (t--)",
+      "\t\tsolve();",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  },
+  "cp advanced boiler plate": {
+    "prefix": "cf array input boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "void solve() {",
+      "\tint n;",
+      "\tcin >> n;",
+      "\tvector<$1> v(n);",
+      "\tfor (auto it = v.begin(); it != v.end(); it++) {",
+      "\t\tcin >> *it;",
+      "\t}",
+      "}",
+      "",
+      "int main() {",
+      "\tint t;",
+      "\tcin >> t;",
+      "\twhile (t--)",
+      "\t\tsolve();",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  },
+
+  "dsa 1 boiler plate": {
+    "prefix": "lc1inp boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "class Solution {",
+      "public:",
+      "\t$1 $2($3 $4) {",
+      "\t}",
+      "};",
+      "",
+      "int main() {",
+      "\t$3 $4 = $5;",
+      "\tSolution sol = Solution();",
+      "\tsol.$2($4);",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  },
+  "dsa 2 boiler plate": {
+    "prefix": "lc2inp boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "class Solution {",
+      "public:",
+      "\t$1 $2($3 $4, $6 $7) {",
+      "\t}",
+      "};",
+      "",
+      "int main() {",
+      "\t$3 $4 = $5;",
+      "\t$6 $7 = $8;",
+      "\tSolution sol = Solution();",
+      "\tsol.$2($4, $7);",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  },
+
+  "dsa 3 boiler plate": {
+    "prefix": "lc3inp boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "class Solution {",
+      "public:",
+      "\t$1 $2($3 $4, $6 $7, $9 $10) {",
+      "\t}",
+      "};",
+      "",
+      "int main() {",
+      "\t$3 $4 = $5;",
+      "\t$6 $7 = $8;",
+      "\t$9 $10 = $11;",
+      "\tSolution sol = Solution();",
+      "\tsol.$2($4, $7, $10);",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  },
+  "dsa 4 boiler plate": {
+    "prefix": "lc4inp boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "class Solution {",
+      "public:",
+      "\t$1 $2($3 $4, $6 $7, $9 $10, $12 $13) {",
+      "\t}",
+      "};",
+      "",
+      "int main() {",
+      "\t$3 $4 = $5;",
+      "\t$6 $7 = $8;",
+      "\t$9 $10 = $11;",
+      "\t$12 $13 = $14;",
+      "\tSolution sol = Solution();",
+      "\tsol.$2($4, $7, $10, $13);",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  },
+  "dsa 5 boiler plate": {
+    "prefix": "cn boilerplate",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "\t$1 $2($3 $4) {",
+      "\t}",
+      "",
+      "int main() {",
+      "\t$2($4);",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "c++ boiler plate"
+  }
+}

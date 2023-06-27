@@ -1,0 +1,14 @@
+
+{
+  "name": "python",
+  "version": "1.0.0",
+  "description": "Python code snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./python.json"
+      }
+    ]
+  }
+}

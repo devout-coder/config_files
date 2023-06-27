@@ -90,6 +90,13 @@ local default_plugins = {
       require "custom.configs.code_runner"
     end,
   },
+  {
+    "L3MON4D3/LuaSnip",
+    lazy = false,
+    config = function()
+      require "custom.snippets"
+    end,
+  },
 
   {
     "NvChad/nvim-colorizer.lua",
@@ -195,9 +202,9 @@ local default_plugins = {
     end,
   },
   -- {
-    -- "williamboman/mason-lspconfig.nvim",
-    -- cmd = { "LspInstall", "LspUninstall" },
-    -- ensure_installed = { "sumneko_lua" },
+  -- "williamboman/mason-lspconfig.nvim",
+  -- cmd = { "LspInstall", "LspUninstall" },
+  -- ensure_installed = { "sumneko_lua" },
   -- },
   {
     "neovim/nvim-lspconfig",
@@ -225,9 +232,14 @@ local default_plugins = {
         "L3MON4D3/LuaSnip",
         dependencies = "rafamadriz/friendly-snippets",
         opts = { history = true, updateevents = "TextChanged,TextChangedI" },
-        config = function(_, opts)
-          require("plugins.configs.others").luasnip(opts)
+
+        config = function()
+          require "custom.snippets"
         end,
+
+        -- config = function(_, opts)
+        --   require("plugins.configs.others").luasnip(opts)
+        -- end,
       },
 
       -- autopairing of (){}[] etc
