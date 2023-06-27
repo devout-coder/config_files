@@ -15,6 +15,7 @@ opt.showmode = false
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 opt.relativenumber=true
+opt.linespace = 10
 
 -- Indenting
 opt.expandtab = true

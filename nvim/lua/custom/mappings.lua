@@ -12,9 +12,10 @@ M.general = {
 
   -- Jump to definition
   ["n"] = {
-    ["gd"] = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
+    -- ["gd"] = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
+    ["<leader>u"] = {":RunCode<CR>", "Run Code"},
+    ["<leader>w"] = {"<C-w>", "Vertical Window stuff"},
   },
-  
 
   -- Open code actions using the default lsp UI, if you want to change this please see the plugins above
   -- ["n"] = {

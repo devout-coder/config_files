@@ -84,6 +84,14 @@ local default_plugins = {
   -- },
   -- flutter plugins end
   {
+    "CRAG666/code_runner.nvim",
+    lazy = false,
+    config = function()
+      require "custom.configs.code_runner"
+    end,
+  },
+
+  {
     "NvChad/nvim-colorizer.lua",
     init = function()
       require("core.utils").lazy_load "nvim-colorizer.lua"
@@ -207,31 +215,6 @@ local default_plugins = {
       require "custom.configs.lspconfig"
     end,
   },
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   init = function()
-  --     require("core.utils").lazy_load "nvim-lspconfig"
-  --   end,
-  --   config = function()
-  --     require "plugins.configs.lspconfig"
-  --   end,
-  -- },
-  
-
-  {
-    "CRAG666/code_runner.nvim",
-    lazy = false,
-    -- dependencies = {
-    --   "jose-elias-alvarez/null-ls.nvim",
-    --   config = function()
-    --     require "custom.configs.null-ls"
-    --   end,
-    -- },
-    config = function()
-      require "custom.configs.code_runner"
-    end,
-  },
-
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",

@@ -13,24 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +227 ~/.config/nvim/lua/plugins/init.lua
-badd +16 ~/.config/nvim/lua/custom/configs/lspconfig.lua
-badd +22 ~/.config/nvim/lua/custom/plugins.lua
-badd +8 ~/.config/nvim/lua/plugins/configs/telescope.lua
+badd +200 lua/core/mappings.lua
+badd +7 ~/.config/nvim/lua/custom/mappings.lua
+badd +1 ~/.config/nvim/lua/plugins/configs/nvimtree.lua
+badd +23 lua/core/init.lua
 badd +1 ~/.config/nvim/lua/custom/init.lua
-badd +3 ~/.config/nvim/lua/custom/README.md
-badd +15 lua/plugins/configs/nvimtree.lua
-badd +15 lua/plugins/configs/mason.lua
-badd +21 lua/custom/configs/overrides.lua
-badd +21 ~/.config/nvim/lua/custom/configs/null-ls.lua
-badd +1 ~/.config/nvim/lua/plugins/configs/treesitter.lua
-badd +225 lua/core/mappings.lua
-badd +17 ~/.config/nvim/lua/custom/mappings.lua
-badd +1 ~/.config/nvim/lua/plugins/configs/lspconfig.lua
-badd +0 ~/.config/nvim/lua/custom/configs/code_runner.lua
+badd +0 ~/.config/nvim/lua/custom/configs/null-ls.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/custom/configs/code_runner.lua
+edit ~/.config/nvim/lua/custom/configs/null-ls.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -44,7 +35,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/plugins/init.lua
+balt ~/.config/nvim/lua/custom/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -55,7 +46,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 23) / 46)
+let s:l = 1 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt

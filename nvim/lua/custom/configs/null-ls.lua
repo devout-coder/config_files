@@ -37,6 +37,7 @@ local sources = {
   formatting.stylua,
   formatting.autopep8,
   formatting.clang_format,
+  formatting.dart_format,
   lint.shellcheck,
 }
 
