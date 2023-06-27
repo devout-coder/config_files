@@ -13,14 +13,19 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +67 .config/nvim/lua/plugins/configs/cmp.lua
+badd +52 .config/nvim/lua/plugins/configs/cmp.lua
 badd +11 .config/nvim/lua/custom/configs/lspconfig.lua
+badd +0 fugitive:///home/pranil/.config/.git//
 argglobal
 %argdel
 edit .config/nvim/lua/plugins/configs/cmp.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -30,8 +35,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+wincmd =
 argglobal
-balt .config/nvim/lua/custom/configs/lspconfig.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -42,13 +47,37 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 67 - ((3 * winheight(0) + 20) / 41)
+let s:l = 49 - ((6 * winheight(0) + 10) / 20)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 67
-normal! 04|
+keepjumps 49
+normal! 012|
 lcd ~/.config/nvim
+wincmd w
+argglobal
+if bufexists(fnamemodify("fugitive:///home/pranil/.config/.git//", ":p")) | buffer fugitive:///home/pranil/.config/.git// | else | edit fugitive:///home/pranil/.config/.git// | endif
+if &buftype ==# 'terminal'
+  silent file fugitive:///home/pranil/.config/.git//
+endif
+balt ~/.config/nvim/lua/custom/configs/lspconfig.lua
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr=<<<<<<<<,>>>>>>>>
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 10) / 20)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+lcd ~/.config/nvim
+wincmd w
+wincmd =
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
