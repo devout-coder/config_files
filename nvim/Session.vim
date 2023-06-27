@@ -13,8 +13,8 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +215 lua/core/mappings.lua
-badd +7 ~/.config/nvim/lua/custom/mappings.lua
+badd +253 lua/core/mappings.lua
+badd +20 ~/.config/nvim/lua/custom/mappings.lua
 badd +1 ~/.config/nvim/lua/plugins/configs/nvimtree.lua
 badd +62 ~/.config/nvim/lua/plugins/init.lua
 badd +1 lua/core/init.lua
@@ -29,7 +29,7 @@ badd +88 ~/.config/nvim/lua/plugins/configs/cmp.lua
 badd +7 ~/.config/nvim/lua/custom/configs/lspconfig.lua
 argglobal
 %argdel
-edit lua/core/mappings.lua
+edit lua/core/init.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -43,7 +43,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt lua/core/init.lua
+balt lua/core/mappings.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
