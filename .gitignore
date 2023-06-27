@@ -8,3 +8,6 @@
 !dunst/
 !home_dir_files/
 !other_files/
+Session.vim
+.luarc.json
+lazy-lock.json
