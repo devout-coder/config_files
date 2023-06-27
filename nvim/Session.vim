@@ -13,8 +13,8 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +199 ~/.config/nvim/lua/plugins/init.lua
-badd +12 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +227 ~/.config/nvim/lua/plugins/init.lua
+badd +16 ~/.config/nvim/lua/custom/configs/lspconfig.lua
 badd +22 ~/.config/nvim/lua/custom/plugins.lua
 badd +8 ~/.config/nvim/lua/plugins/configs/telescope.lua
 badd +1 ~/.config/nvim/lua/custom/init.lua
@@ -26,9 +26,11 @@ badd +21 ~/.config/nvim/lua/custom/configs/null-ls.lua
 badd +1 ~/.config/nvim/lua/plugins/configs/treesitter.lua
 badd +225 lua/core/mappings.lua
 badd +17 ~/.config/nvim/lua/custom/mappings.lua
+badd +1 ~/.config/nvim/lua/plugins/configs/lspconfig.lua
+badd +0 ~/.config/nvim/lua/custom/configs/code_runner.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/custom/mappings.lua
+edit ~/.config/nvim/lua/custom/configs/code_runner.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -42,7 +44,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt ~/.config/nvim/lua/custom/configs/null-ls.lua
+balt ~/.config/nvim/lua/plugins/init.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -53,12 +55,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 17 - ((16 * winheight(0) + 23) / 46)
+let s:l = 1 - ((0 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 17
-normal! 023|
+keepjumps 1
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

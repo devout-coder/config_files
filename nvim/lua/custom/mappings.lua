@@ -13,8 +13,6 @@ M.general = {
   -- Jump to definition
   ["n"] = {
     ["gd"] = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
-    ["<A-u>"] = {"<Cmd>lua require('nvterm.terminal').send('python ' .. vim.fn.expand('%') .. '\\r', 'float')<CR>", "Run current Python file in terminal"},
-    ["<C-W>"] = {":bd!<CR>", "Close current buffer"}
   },
   
 

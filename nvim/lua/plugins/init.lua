@@ -216,6 +216,21 @@ local default_plugins = {
   --     require "plugins.configs.lspconfig"
   --   end,
   -- },
+  
+
+  {
+    "CRAG666/code_runner.nvim",
+    lazy = false,
+    -- dependencies = {
+    --   "jose-elias-alvarez/null-ls.nvim",
+    --   config = function()
+    --     require "custom.configs.null-ls"
+    --   end,
+    -- },
+    config = function()
+      require "custom.configs.code_runner"
+    end,
+  },
 
   -- load luasnips + cmp related in insert mode only
   {
