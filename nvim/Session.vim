@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/.config/nvim
+cd ~
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,23 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +253 lua/core/mappings.lua
-badd +20 ~/.config/nvim/lua/custom/mappings.lua
-badd +1 ~/.config/nvim/lua/plugins/configs/nvimtree.lua
-badd +62 ~/.config/nvim/lua/plugins/init.lua
-badd +1 lua/core/init.lua
-badd +13 ~/.config/nvim/lua/custom/init.lua
-badd +26 ~/.config/nvim/lua/custom/configs/null-ls.lua
-badd +2 ~/.config/nvim/lua/custom/snippets/cpp/cpp.json
-badd +1 ~/.config/nvim/lua/custom/snippets/cpp/package.json
-badd +4 ~/.config/nvim/lua/custom/snippets/init.lua
-badd +14 ~/.config/nvim/lua/custom/snippets/python/package.json
-badd +6 ~/.config/nvim/lua/custom/snippets/python/python.json
-badd +88 ~/.config/nvim/lua/plugins/configs/cmp.lua
-badd +7 ~/.config/nvim/lua/custom/configs/lspconfig.lua
+badd +67 .config/nvim/lua/plugins/configs/cmp.lua
+badd +11 .config/nvim/lua/custom/configs/lspconfig.lua
 argglobal
 %argdel
-edit lua/core/init.lua
+edit .config/nvim/lua/plugins/configs/cmp.lua
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -43,7 +31,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-balt lua/core/mappings.lua
+balt .config/nvim/lua/custom/configs/lspconfig.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -54,12 +42,13 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 20) / 41)
+let s:l = 67 - ((3 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 67
+normal! 04|
+lcd ~/.config/nvim
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

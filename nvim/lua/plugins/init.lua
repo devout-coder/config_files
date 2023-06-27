@@ -90,13 +90,13 @@ local default_plugins = {
       require "custom.configs.code_runner"
     end,
   },
-  {
-    "L3MON4D3/LuaSnip",
-    lazy = false,
-    config = function()
-      require "custom.snippets"
-    end,
-  },
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   lazy = false,
+  --   config = function()
+  --     require "custom.snippets"
+  --   end,
+  -- },
 
   {
     "NvChad/nvim-colorizer.lua",
@@ -223,6 +223,7 @@ local default_plugins = {
     end,
   },
   -- load luasnips + cmp related in insert mode only
+  -- ~/.config/nvim/
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
@@ -234,7 +235,13 @@ local default_plugins = {
         opts = { history = true, updateevents = "TextChanged,TextChangedI" },
 
         config = function()
-          require "custom.snippets"
+          local luasnip = require "luasnip"
+          luasnip.config.set_config {
+            history = true,
+            updateevents = "TextChanged,TextChangedI",
+          }
+          require("luasnip.loaders.from_vscode").lazy_load { paths = { "~/.config/nvim/lua/custom/snippets/python" } }
+          require("luasnip.loaders.from_vscode").lazy_load { paths = { "~/.config/nvim/lua/custom/snippets/cpp" } }
         end,
 
         -- config = function(_, opts)

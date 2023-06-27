@@ -1,11 +1,11 @@
 {
-  "name": "c++",
+  "name": "cpp",
   "version": "1.0.0",
-  "description": "C++ code snippets",
+  "description": "Rust code snippets",
   "contributes": {
     "snippets": [
       {
-        "language": "c++",
+        "language": "cpp",
         "path": "./cpp.json"
       }
     ]
