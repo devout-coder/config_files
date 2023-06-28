@@ -24,7 +24,7 @@ M.treesitter = {
 M.mason = {
   ensure_installed = {
     -- lua stuff
-    "lua-language-server",
+    -- "lua-language-server",
     "stylua",
 
     -- web dev stuff

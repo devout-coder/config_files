@@ -1,6 +1,6 @@
 local options = {
   ensure_installed = {
-        "lua-language-server",
+        -- "lua-language-server",
         "html-lsp",
         "prettier",
         "stylua",
