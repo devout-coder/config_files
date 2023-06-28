@@ -84,19 +84,26 @@ local default_plugins = {
   -- },
   -- flutter plugins end
   {
+    "p00f/cphelper.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    -- config = function()
+    --   require "custom.configs.code_runner"
+    -- end,
+  },
+  {
     "CRAG666/code_runner.nvim",
     lazy = false,
     config = function()
       require "custom.configs.code_runner"
     end,
   },
-  -- {
-  --   "L3MON4D3/LuaSnip",
-  --   lazy = false,
-  --   config = function()
-  --     require "custom.snippets"
-  --   end,
-  -- },
+  {
+    "stsewd/gx-extended.vim",
+    lazy = false,
+  },
 
   {
     "NvChad/nvim-colorizer.lua",
