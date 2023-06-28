@@ -8,7 +8,9 @@ require('code_runner').setup({
     },
     cpp = {
       "cd $dir &&",
-      "g++ $fileName &&",
+      "echo $dir &&",
+      "echo $fileName &&",
+      "g++ $fileName -o $fileNameWithoutExt &&",
       "./$fileNameWithoutExt"
     },
     python = "python3 -u",
