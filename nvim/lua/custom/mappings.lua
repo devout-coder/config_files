@@ -1,4 +1,5 @@
 ---@type MappingsTable
+--
 local M = {}
 
 M.general = {
@@ -15,6 +16,10 @@ M.general = {
     -- ["gd"] = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
     ["<leader>u"] = {":RunCode<CR>", "Run Code"},
     ["<leader>w"] = {"<C-w>", "Vertical Window stuff"},
+    ["<leader>gs"] = {":Git add .<CR>", "Git Stage"},
+    ["<leader>gc"] = {":Git commit<CR>", "Git Commit"},
+    ["<leader>gp"] = {":Git push<CR>", "Git Push"},
+   -- CR is similar to <Return>
   },
 
   -- Open code actions using the default lsp UI, if you want to change this please see the plugins above
