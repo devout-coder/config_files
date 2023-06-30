@@ -44,4 +44,16 @@ local sources = {
 null_ls.setup {
   debug = true,
   sources = sources,
+    on_init = function(new_client, _) 
+      new_client.offset_encoding = 'utf-32'
+    end,
 }
+
+local notify = vim.notify
+vim.notify = function(msg, ...)
+    if msg:match("warning: multiple different client offset_encodings") then
+        return
+    end
+
+    notify(msg, ...)
+end
