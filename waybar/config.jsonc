@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "height": 40,
-  "margin": 7,
+  "margin": 4,
   "width": 1930,
   "modules-left": ["custom/launcher", "wlr/workspaces", "custom/spotify"],
   "modules-center": ["clock"],
