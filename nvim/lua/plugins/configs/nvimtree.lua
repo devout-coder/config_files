@@ -72,6 +72,16 @@ local options = {
       },
     },
   },
+  diagnostics = {
+    enable = true,
+    show_on_dirs = true,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    },
+  },
 }
 
 return options
