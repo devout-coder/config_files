@@ -19,6 +19,8 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 -- require'plugins.configs.lspconfig'.pyright.setup{}
 -- require("lua.pde.cpp")
 -- require("lua.pde.go")
