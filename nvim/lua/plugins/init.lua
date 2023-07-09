@@ -83,6 +83,19 @@ local default_plugins = {
   --   lazy = false,
   -- },
   -- flutter plugins end
+{
+ "folke/trouble.nvim",
+ dependencies = { "nvim-tree/nvim-web-devicons" },
+ opts = {
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  -- refer to the configuration section below
+    position = "bottom", -- position of the list can be: bottom, top, left, right
+    height = 10, -- height of the trouble list when position is top or bottom
+    width = 50, -- width of the list when position is left or right
+    icons = true,
+ },
+},
   {
     "p00f/cphelper.nvim",
     lazy = false,
