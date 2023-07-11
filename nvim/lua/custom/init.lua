@@ -9,5 +9,8 @@
 --
 --
 
+vim.g["leetcode_browser"] = "firefox"
+
+vim.g["dir"] = vim.loop.cwd(),
 
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]

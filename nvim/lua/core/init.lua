@@ -57,7 +57,6 @@ g.mapleader = " "
 for _, provider in ipairs { "node", "perl", "ruby" } do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
-vim.g["leetcode_browser"] = "firefox"
 
 -- add binaries installed by mason.nvim to path
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"

@@ -97,7 +97,7 @@ local default_plugins = {
  },
 },
   {
-  "Dhanus3133/LeetBuddy.nvim",
+  "devout-coder/Leetbuddy.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
