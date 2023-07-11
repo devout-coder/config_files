@@ -103,8 +103,10 @@ local default_plugins = {
     "nvim-telescope/telescope.nvim",
   },
   config = function()
+    -- local lfs = require("lfs")
     require("leetbuddy").setup({
-        language='cpp'
+        language='cpp',
+  directory = vim.loop.cwd(),
       })
   end,
   keys = {
@@ -136,10 +138,10 @@ local default_plugins = {
     "stsewd/gx-extended.vim",
     lazy = false,
   },
-  {
-    "ianding1/leetcode.vim",
-    lazy = false,
-  },
+  -- {
+  --   "ianding1/leetcode.vim",
+  --   lazy = false,
+  -- },
 
   {
     "NvChad/nvim-colorizer.lua",
