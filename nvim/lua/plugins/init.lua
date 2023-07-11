@@ -97,6 +97,25 @@ local default_plugins = {
  },
 },
   {
+  "Dhanus3133/LeetBuddy.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim",
+  },
+  config = function()
+    require("leetbuddy").setup({
+        language='cpp'
+      })
+  end,
+  keys = {
+    { "<leader>lq", "<cmd>LBQuestions<cr>", desc = "List Questions" },
+    { "<leader>ll", "<cmd>LBQuestion<cr>", desc = "View Question" },
+    { "<leader>lr", "<cmd>LBReset<cr>", desc = "Reset Code" },
+    { "<leader>lt", "<cmd>LBTest<cr>", desc = "Run Code" },
+    { "<leader>ls", "<cmd>LBSubmit<cr>", desc = "Submit Code" },
+  },
+},
+  {
     "p00f/cphelper.nvim",
     lazy = false,
     dependencies = {
@@ -115,6 +134,10 @@ local default_plugins = {
   },
   {
     "stsewd/gx-extended.vim",
+    lazy = false,
+  },
+  {
+    "ianding1/leetcode.vim",
     lazy = false,
   },
 
