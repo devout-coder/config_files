@@ -42,47 +42,23 @@ local default_plugins = {
     },
     config = true,
   },
-  -- {
-  --   "github/copilot.vim",
-  --   lazy = false,
-  -- },
-  -- {
-  --     'arjunmahishi/flow.nvim',
-  --     lazy = false,
-  -- },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
 
-  -- {
-  --     'neoclide/coc.nvim',
-  --     lazy = false,
-  --     branch = "master",
-  --     build = "yarn install --frozen-lockfile",
-  --     -- config = true,
-  -- },
-  -- {
-  --     'dart-lang/dart-vim-plugin',
-  --     lazy = false,
-  --     -- config = true,
-  -- },
-  -- {
-  --     'thosakwe/vim-flutter',
-  --     lazy = false,
-  --     -- config = true,
-  -- },
-  -- {
-  --     'natebosch/vim-lsc',
-  --     lazy = false,
-  --     -- config = true,
-  -- },
-  -- {
-  --     'natebosch/vim-lsc-dart',
-  --     lazy = false,
-  --     -- config = true,
-  -- },
-  --   -- {
-  --   'Nash0x7E2/awesome-flutter-snippets',
-  --   lazy = false,
-  -- },
-  -- flutter plugins end
+ {
+    'glacambre/firenvim',
+
+    -- Lazy load firenvim
+    -- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297
+    lazy = false,
+    -- cond = not not vim.g.started_by_firenvim,
+    -- build = function()
+    --     require("lazy").load({ plugins = "firenvim", wait = false })
+    --     vim.fn["firenvim#install"](0)
+    -- end
+}, 
 {
  "folke/trouble.nvim",
  dependencies = { "nvim-tree/nvim-web-devicons" },
