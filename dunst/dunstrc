@@ -195,6 +195,9 @@
     # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
 
+  [skip-rule] 
+  appname=blueman
+  skip_display=true
     ### Icons ###
 
     # Recursive icon lookup. You can set a single theme, instead of having to
