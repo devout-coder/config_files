@@ -72,6 +72,9 @@ local default_plugins = {
     icons = true,
  },
 },
+{
+ "christoomey/vim-system-copy",
+},
   {
   "devout-coder/Leetbuddy.nvim",
   dependencies = {
