@@ -71,10 +71,11 @@ local default_plugins = {
     width = 50, -- width of the list when position is left or right
     icons = true,
  },
-},
+
 {
  "christoomey/vim-system-copy",
 },
+{ "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
   {
   "devout-coder/Leetbuddy.nvim",
   dependencies = {
@@ -375,8 +376,9 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
-}
 
+}
+}
 local config = require("core.utils").load_config()
 
 if #config.plugins > 0 then
