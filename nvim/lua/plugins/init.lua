@@ -75,7 +75,15 @@ local default_plugins = {
 {
  "christoomey/vim-system-copy",
 },
-{ "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
+{
+	'LukasPietzschmann/telescope-tabs',
+	requires = { 'nvim-telescope/telescope.nvim' },
+	config = function()
+		require'telescope-tabs'.setup{
+			-- Your custom config :^)
+		}
+	end
+},
   {
   "devout-coder/Leetbuddy.nvim",
   dependencies = {
