@@ -148,6 +148,7 @@ alias samantha="gpt_chat.sh"
 alias em="emacsclient -c -a 'emacs'" 
 alias deb="use_phone.sh"
 alias pac="sudo pacman"
+alias doc="sudo docker"
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
