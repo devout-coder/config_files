@@ -19,6 +19,7 @@ M.general = {
     ["<leader>gs"] = {":Git add .<CR>", "Git Stage"},
     ["<leader>gc"] = {":Git commit<CR>", "Git Commit"},
     ["<leader>gp"] = {":Git push<CR>", "Git Push"},
+    -- ["<leader>"] = {":Git push<CR>", "Git Push"},
    -- CR is similar to <Return>
   },
 
