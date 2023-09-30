@@ -116,6 +116,16 @@ local default_plugins = {
     -- end,
   },
   {
+    "mlaursen/vim-react-snippets",
+    lazy = false,
+    dependencies = {
+      "SirVer/ultisnips",
+    },
+    -- config = function()
+    --   require "custom.configs.code_runner"
+    -- end,
+  },
+  {
     "CRAG666/code_runner.nvim",
     lazy = false,
     config = function()
