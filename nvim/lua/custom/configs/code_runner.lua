@@ -6,6 +6,9 @@ require('code_runner').setup({
       "javac $fileName &&",
       "java $fileNameWithoutExt"
     },
+    go = {
+      "go run $fileName &&",
+    },
     cpp = {
       "cd $dir &&",
       "echo $dir &&",

@@ -38,6 +38,7 @@ local sources = {
   formatting.autopep8,
   formatting.clang_format,
   formatting.dart_format,
+  formatting.gofumpt,
   lint.shellcheck,
 }
 
